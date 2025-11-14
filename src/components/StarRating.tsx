@@ -1,7 +1,28 @@
 import { useState } from "react";
 import Star from "./Star";
 import PropTypes from "prop-types";
-
+/**
+ * A reusable Star Rating component that allows users to rate something between 1 and a specified maximum.
+ * It supports custom colors, sizes, and a callback function for handling the rating change.
+ * @example
+ * <StarRating
+        maxRating={5}
+        onSetRating={(rate) => {
+          console.log(rate);
+        }}
+        messages={["😡", "😠", "😐", "🙂", "😊"]}
+        className=""
+        defaultRating={0}
+        size={50}
+      />
+ * @property {number} [maxRating=5] The maximum number of stars available for rating.
+ * @property {string | { textColor: string, starColor: string }} [color="#fcc419"] The color of the stars and text. Can be a single string or an object for separate colors.
+ * @property {number} [size=25] The size of the stars in pixels.
+ * @property {number} [defaultRating=0] The default rating displayed initially.
+ * @property {(rate: number) => void} onSetRating A callback function that is called when a user selects a new rating.
+ * @property {string} [className] Optional CSS class name for the main container div.
+ * @property {string[]} [messages] Optional array of custom messages corresponding to each rating value. Must have the same length as maxRating.
+ */
 function StarRating({
   maxRating = 5,
   color = "#fcc419",
