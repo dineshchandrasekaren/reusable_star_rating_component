@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
  * @example
  * <StarRating
         maxRating={5}
+        color="#fcc419"
         onSetRating={(rate) => {
           console.log(rate);
         }}
