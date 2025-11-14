@@ -9,7 +9,7 @@ function StarRating({
   defaultRating = 0,
   onSetRating,
   className,
-  messages = ["😡", "😠", "😐", "🙂", "😊"],
+  messages = [],
 }: {
   color?: string | { textColor: string; starColor: string };
   size?: number;
